@@ -1,4 +1,4 @@
-
+import Swal from 'https://cdn.skypack.dev/sweetalert2';
 import { insertarUsuario } from "../apiConnection/consumeApi.js";
 import { obtainUsuarios } from "../apiConnection/consumeApi.js";
 
