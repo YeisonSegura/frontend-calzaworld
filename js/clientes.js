@@ -1,5 +1,4 @@
 import { insertarClientes,actualizarClientes,eliminarClientes,obtainClientes,obtainVentas } from "../apiConnection/consumeApi.js";
-//import { obtainProveedores,obtainProductos } from "../apiConnection/consumeApi.js";
 
 
 const formularioClientes = document.getElementById("formularioClientes");

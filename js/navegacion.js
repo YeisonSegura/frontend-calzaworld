@@ -8,7 +8,7 @@ botones.forEach(boton => {
     const number = e.target.dataset.number;
 
     if (!usuario || !tipoAcceso) {
-      window.location.href = "/frontend/login.html";
+      window.location.href = "../login.html";
       return;
     }
 

@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   const tipoAcceso = localStorage.getItem("tipoacceso");
 
   if (!usuario || !["Admin", "Usuario"].includes(tipoAcceso)) {
-    window.location.href = "/frontend/login.html";
+    window.location.href = "../login.html";
     return;
   }
 

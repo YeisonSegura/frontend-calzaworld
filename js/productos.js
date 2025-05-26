@@ -1,6 +1,5 @@
 
 import { insertarProducto,actualizarProductos,eliminarProductos,obtainProveedores,obtainVentas,obtainProductos } from "../apiConnection/consumeApi.js";
-//import { obtainProveedores,obtainProductos } from "../apiConnection/consumeApi.js";
 
 
 const formRegistro = document.getElementById("formularioProductos");
