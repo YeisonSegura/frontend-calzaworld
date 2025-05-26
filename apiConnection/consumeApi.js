@@ -90,7 +90,7 @@ export const actualizarUsuarios = async (usuarioActualizado) => {
 };
 export const eliminarUsuarios = async (idusuario) => {
     try {
-        const respuesta = await fetch(`https://calzaworld-rybh.onrender.com/usuarios/${idusuario}`, {
+        const respuesta = await fetch(`https://calzaworld-rybh.onrender.com/api/usuarios/${idusuario}`, {
             method: "DELETE"
         });
 
@@ -232,7 +232,7 @@ export const actualizarVentas = async (ventaActualizada) => {
 };
 export const eliminarVentas = async (idVenta) => {
     try {
-        const respuesta = await fetch(`http://localhost:5000/api/ventas/${idVenta}`, {
+        const respuesta = await fetch(`https://calzaworld-rybh.onrender.com/api/ventas/${idVenta}`, {
             method: "DELETE"
         });
 
