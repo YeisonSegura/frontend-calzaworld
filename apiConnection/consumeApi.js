@@ -1,10 +1,10 @@
 //import { application } from "express";
 
-const url = "https://calzaworld.onrender.com/api/productos"
-const urlventas = "https://calzaworld.onrender.com/api/ventas"
-const urlproveedores = "https://calzaworld.onrender.com/api/proveedores"
-const urlclientes = "https://calzaworld.onrender.com/api/clientes"
-const urlusuarios = "https://calzaworld.onrender.com/api/usuarios"
+const url = "https://backend-calzaworld.onrender.com/api/productos"
+const urlventas = "https://backend-calzaworld.onrender.com/api/ventas"
+const urlproveedores = "https://backend-calzaworld.onrender.com/api/proveedores"
+const urlclientes = "https://backend-calzaworld.onrender.com/api/clientes"
+const urlusuarios = "https://backend-calzaworld.onrender.com/api/usuarios"
 
 
 export const obtainProductos = async()=>{
