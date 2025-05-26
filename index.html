@@ -4,7 +4,7 @@
     const tipoAcceso = localStorage.getItem("tipoacceso");
 
     if (!usuario || !tipoAcceso) {
-      window.location.href = "/frontend/login.html";
+      window.location.href = "login.html";
       return;
     }
 
@@ -23,13 +23,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calzado la 43</title>
-    <link rel="stylesheet" href="/frontend/css/stylesindex.css">
+    <link rel="stylesheet" href="css/stylesindex.css">
 
 </head>
 <body>
     <header class="container"> 
         <div>
-            <img  width="150px" height="100px" src="/frontend/img/icon5.png" alt="">
+            <img  width="150px" height="100px" src="img/icon5.png" alt="">
         </div>  
         <div class="clasea">
             <button data-number="1"  class="btn">Inicio</button>        
@@ -48,7 +48,7 @@
         <div class="contenido" data-seccion="1">
            <main >
             <div>
-                <img width="250px" height="300px" src="/frontend/img/fondo1.jpg" alt="">                
+                <img width="250px" height="300px" src="img/fondo1.jpg" alt="">                
             </div>
                 <div>
                     La empresa calzado la 43, es una empresa colombiana con mas de 10 años de experiencia  en la comercialización
@@ -650,23 +650,23 @@
         </div>
 
     </div>
-    <script src="/frontend/js/navegacion.js" type="module"></script>
-    <script src="/frontend/js/proveedores.js " type="module" ></script>
-    <script src="/frontend/js/inventario.js" type="module" ></script>
-    <script src="/frontend/js/clientes.js" type="module" ></script>
-    <script src="/frontend/js/productos.js" type="module"></script>
-    <script src="/frontend/js/ventas.js" type="module"></script>
-    <script src="/frontend/js/usuarios.js" type="module"></script>
+    <script src="js/navegacion.js" type="module"></script>
+    <script src="js/proveedores.js " type="module" ></script>
+    <script src="js/inventario.js" type="module" ></script>
+    <script src="js/clientes.js" type="module" ></script>
+    <script src="js/productos.js" type="module"></script>
+    <script src="js/ventas.js" type="module"></script>
+    <script src="js/usuarios.js" type="module"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> 
 
    
     <script type="module">
-    import { eliminarProvee, abrirModalEliProv, cerrarModalEliProv,cerrarModal  } from '../frontend/js/proveedores.js';
-    import {  eliminarClien , abrirModalEliClie,cerrarModalEliClie,cerrarModalcli} from '../frontend/js/clientes.js';
-    import {  eliminarProducto,cerrarModalProd,abrirModalEliProd,cerrarModalEliProd} from '../frontend/js/productos.js';
-    import {  eliminarVenta,cerrarModalVenta,abrirModalEliVenta,cerrarModalEliVenta} from '../frontend/js/ventas.js';
-    import {  eliminarUsu,cerrarModalUsu,abrirModalEliUsu,cerrarModalEliUsu} from '../frontend/js/usuarios.js';
+    import { eliminarProvee, abrirModalEliProv, cerrarModalEliProv,cerrarModal  } from 'js/proveedores.js';
+    import {  eliminarClien , abrirModalEliClie,cerrarModalEliClie,cerrarModalcli} from 'js/clientes.js';
+    import {  eliminarProducto,cerrarModalProd,abrirModalEliProd,cerrarModalEliProd} from 'js/productos.js';
+    import {  eliminarVenta,cerrarModalVenta,abrirModalEliVenta,cerrarModalEliVenta} from 'js/ventas.js';
+    import {  eliminarUsu,cerrarModalUsu,abrirModalEliUsu,cerrarModalEliUsu} from 'js/usuarios.js';
 
 
     // Exponer al global para que se pueda usar desde `onclick` en HTML
@@ -701,7 +701,7 @@
   function cerrarSesion() {
   localStorage.clear();
   sessionStorage.clear();
-  window.location.href = "/frontend/login.html";
+  window.location.href = "login.html";
 }
 
 </script>
