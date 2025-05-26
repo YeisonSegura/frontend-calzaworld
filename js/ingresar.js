@@ -1,14 +1,8 @@
 import { obtainUsuarios } from "../apiConnection/consumeApi.js";
 
-console.log("✅ ingresar.js cargado");
 
 document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("loginForm");
-
-  if (!form) {
-    console.error("❌ No se encontró el formulario con id='loginForm'");
-    return;
-  }
 
   form.addEventListener("submit", async function(event) {
     event.preventDefault();

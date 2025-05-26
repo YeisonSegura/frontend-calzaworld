@@ -3,7 +3,7 @@
 const url = "https://calzaworld-rybh.onrender.com/api/productos"
 const urlventas = "https://calzaworld-rybh.onrender.com/api/ventas"
 const urlproveedores = "https://calzaworld-rybh.onrender.com/api/proveedores"
-const urlclientes = "https://calzaworld-rybh.onrender.com/clientes"
+const urlclientes = "https://calzaworld-rybh.onrender.com/api/clientes"
 const urlusuarios = "https://calzaworld-rybh.onrender.com/api/usuarios"
 
 
