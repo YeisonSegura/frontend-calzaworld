@@ -6,7 +6,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   form.addEventListener("submit", async function(event) {
     event.preventDefault();
-    console.log("📩 Formulario enviado");
 
     const usuariosObtained = await obtainUsuarios();
     const usuario = document.getElementById('usuario').value;

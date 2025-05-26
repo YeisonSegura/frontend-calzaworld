@@ -661,41 +661,40 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> 
 
    
-    <script type="module">
-    import { eliminarProvee, abrirModalEliProv, cerrarModalEliProv,cerrarModal  } from 'js/proveedores.js';
-    import {  eliminarClien , abrirModalEliClie,cerrarModalEliClie,cerrarModalcli} from 'js/clientes.js';
-    import {  eliminarProducto,cerrarModalProd,abrirModalEliProd,cerrarModalEliProd} from 'js/productos.js';
-    import {  eliminarVenta,cerrarModalVenta,abrirModalEliVenta,cerrarModalEliVenta} from 'js/ventas.js';
-    import {  eliminarUsu,cerrarModalUsu,abrirModalEliUsu,cerrarModalEliUsu} from 'js/usuarios.js';
+  <script type="module">
+    import { eliminarProvee, abrirModalEliProv, cerrarModalEliProv, cerrarModal } from './js/proveedores.js';
+    import { eliminarClien, abrirModalEliClie, cerrarModalEliClie, cerrarModalcli } from './js/clientes.js';
+    import { eliminarProducto, cerrarModalProd, abrirModalEliProd, cerrarModalEliProd } from './js/productos.js';
+    import { eliminarVenta, cerrarModalVenta, abrirModalEliVenta, cerrarModalEliVenta } from './js/ventas.js';
+    import { eliminarUsu, cerrarModalUsu, abrirModalEliUsu, cerrarModalEliUsu } from './js/usuarios.js';
 
-
-    // Exponer al global para que se pueda usar desde `onclick` en HTML
+    // Exponer funciones al window para que se puedan usar desde onclick
     window.eliminarProvee = eliminarProvee;
     window.abrirModalEliProv = abrirModalEliProv;
     window.cerrarModalEliProv = cerrarModalEliProv;
     window.cerrarModal = cerrarModal;
-    //cliente
+
     window.eliminarClien = eliminarClien;
     window.abrirModalEliClie = abrirModalEliClie;
     window.cerrarModalEliClie = cerrarModalEliClie;
     window.cerrarModalcli = cerrarModalcli;
-    //productos
+
     window.eliminarProducto = eliminarProducto;
     window.abrirModalEliProd = abrirModalEliProd;
     window.cerrarModalEliProd = cerrarModalEliProd;
     window.cerrarModalProd = cerrarModalProd;
-    //ventas
+
     window.eliminarVenta = eliminarVenta;
     window.abrirModalEliVenta = abrirModalEliVenta;
     window.cerrarModalEliVenta = cerrarModalEliVenta;
     window.cerrarModalVenta = cerrarModalVenta;
-    //ventas
+
     window.eliminarUsu = eliminarUsu;
     window.abrirModalEliUsu = abrirModalEliUsu;
     window.cerrarModalEliUsu = cerrarModalEliUsu;
-    window.cerrarModalUsu= cerrarModalUsu;
-
+    window.cerrarModalUsu = cerrarModalUsu;
     </script>
+
    
 <script>
   function cerrarSesion() {
