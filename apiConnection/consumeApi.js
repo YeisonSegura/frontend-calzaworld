@@ -1,10 +1,10 @@
 //import { application } from "express";
 
-const url = "http://localhost:5000/api/productos"
-const urlventas = "http://localhost:5000/api/ventas"
-const urlproveedores = "http://localhost:5000/api/proveedores"
-const urlclientes = "http://localhost:5000/api/clientes"
-const urlusuarios = "http://localhost:5000/api/usuarios"
+const url = "https://calzaworld-rybh.onrender.com/api/productos"
+const urlventas = "https://calzaworld-rybh.onrender.com/api/ventas"
+const urlproveedores = "https://calzaworld-rybh.onrender.com/api/proveedores"
+const urlclientes = "https://calzaworld-rybh.onrender.com/clientes"
+const urlusuarios = "https://calzaworld-rybh.onrender.com/api/usuarios"
 
 
 export const obtainProductos = async()=>{
@@ -56,7 +56,7 @@ export const obtainUsuarios = async()=>{
 //usuarios
 export const insertarUsuario = async (nuevoUsuario) => {
     try {
-        const respuesta = await fetch("http://localhost:5000/api/usuarios", {
+        const respuesta = await fetch("https://calzaworld-rybh.onrender.com/api/usuarios", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -74,7 +74,7 @@ export const insertarUsuario = async (nuevoUsuario) => {
 
 export const actualizarUsuarios = async (usuarioActualizado) => {
     try {
-        const respuesta = await fetch(`http://localhost:5000/api/usuarios/${usuarioActualizado.u_id}`, {
+        const respuesta = await fetch(`https://calzaworld-rybh.onrender.com/api/usuarios/${usuarioActualizado.u_id}`, {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json"
@@ -90,7 +90,7 @@ export const actualizarUsuarios = async (usuarioActualizado) => {
 };
 export const eliminarUsuarios = async (idusuario) => {
     try {
-        const respuesta = await fetch(`http://localhost:5000/api/usuarios/${idusuario}`, {
+        const respuesta = await fetch(`https://calzaworld-rybh.onrender.com/usuarios/${idusuario}`, {
             method: "DELETE"
         });
 
@@ -104,7 +104,7 @@ export const eliminarUsuarios = async (idusuario) => {
 //proveedores
 export const insertarProveedores = async (nuevoProveedor) => {
     try {
-        const respuesta = await fetch("http://localhost:5000/api/proveedores", {
+        const respuesta = await fetch("https://calzaworld-rybh.onrender.com/api/proveedores", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -121,7 +121,7 @@ export const insertarProveedores = async (nuevoProveedor) => {
 
 export const actualizarProveedores = async (proveedorActualizado) => {
     try {
-        const respuesta = await fetch(`http://localhost:5000/api/proveedores/${proveedorActualizado.p_id_proveedor}`, {
+        const respuesta = await fetch(`https://calzaworld-rybh.onrender.com/api/proveedores/${proveedorActualizado.p_id_proveedor}`, {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json"
@@ -137,7 +137,7 @@ export const actualizarProveedores = async (proveedorActualizado) => {
 };
 export const eliminarProveedor = async (idproducto) => {
     try {
-        const respuesta = await fetch(`http://localhost:5000/api/proveedores/${idproducto}`, {
+        const respuesta = await fetch(`https://calzaworld-rybh.onrender.com/api/proveedores/${idproducto}`, {
             method: "DELETE"
         });
 
@@ -151,7 +151,7 @@ export const eliminarProveedor = async (idproducto) => {
 //clientes
 export const insertarClientes = async (nuevoCliente) => {
     try {
-        const respuesta = await fetch("http://localhost:5000/api/clientes", {
+        const respuesta = await fetch("https://calzaworld-rybh.onrender.com/api/clientes", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -168,7 +168,7 @@ export const insertarClientes = async (nuevoCliente) => {
 
 export const actualizarClientes = async (clienteActualizado) => {
     try {
-        const respuesta = await fetch(`http://localhost:5000/api/clientes/${clienteActualizado.c_id_cliente}`, {
+        const respuesta = await fetch(`https://calzaworld-rybh.onrender.com/api/clientes/${clienteActualizado.c_id_cliente}`, {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json"
@@ -184,7 +184,7 @@ export const actualizarClientes = async (clienteActualizado) => {
 };
 export const eliminarClientes = async (idCliente) => {
     try {
-        const respuesta = await fetch(`http://localhost:5000/api/clientes/${idCliente}`, {
+        const respuesta = await fetch(`https://calzaworld-rybh.onrender.com/api/clientes/${idCliente}`, {
             method: "DELETE"
         });
 
@@ -199,7 +199,7 @@ export const eliminarClientes = async (idCliente) => {
 //ventas
 export const insertarVentas = async (nuevoVenta) => {
     try {
-        const respuesta = await fetch("http://localhost:5000/api/ventas", {
+        const respuesta = await fetch("https://calzaworld-rybh.onrender.com/api/ventas", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -216,7 +216,7 @@ export const insertarVentas = async (nuevoVenta) => {
 //v_id_venta , v_id_producto,  v_id_cliente , v_estado_pago,v_cantidad,v_precio_u,v_ciudad_envio,v_direccion_envio,v_Total,v_correo,v_estado_despacho 
 export const actualizarVentas = async (ventaActualizada) => {
     try {
-        const respuesta = await fetch(`http://localhost:5000/api/ventas/${ventaActualizada.v_id_venta}`, {
+        const respuesta = await fetch(`https://calzaworld-rybh.onrender.com/api/ventas/${ventaActualizada.v_id_venta}`, {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json"
@@ -247,7 +247,7 @@ export const eliminarVentas = async (idVenta) => {
 
 export const insertarProducto = async (nuevoProducto) => {
     try {
-        const respuesta = await fetch("http://localhost:5000/api/productos", {
+        const respuesta = await fetch("https://calzaworld-rybh.onrender.com/api/productos", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -264,7 +264,7 @@ export const insertarProducto = async (nuevoProducto) => {
 
 export const actualizarProductos = async (productoActualizado) => {
     try {
-        const respuesta = await fetch(`http://localhost:5000/api/productos/${productoActualizado.p_id_producto}`, {
+        const respuesta = await fetch(`https://calzaworld-rybh.onrender.com/api/productos/${productoActualizado.p_id_producto}`, {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json"
@@ -280,7 +280,7 @@ export const actualizarProductos = async (productoActualizado) => {
 };
 export const eliminarProductos = async (idProducto) => {
     try {
-        const respuesta = await fetch(`http://localhost:5000/api/productos/${idProducto}`, {
+        const respuesta = await fetch(`https://calzaworld-rybh.onrender.com/api/productos/${idProducto}`, {
             method: "DELETE"
         });
 
