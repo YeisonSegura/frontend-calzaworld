@@ -1,5 +1,4 @@
 
-import Swal from 'https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js';
 import { insertarUsuario } from "../apiConnection/consumeApi.js";
 import { obtainUsuarios } from "../apiConnection/consumeApi.js";
 
