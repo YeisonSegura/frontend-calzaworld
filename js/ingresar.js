@@ -1,4 +1,5 @@
-import { obtainUsuarios } from "../apiConnection/consumeApi.js";
+//import { obtainUsuarios } from "../apiConnection/consumeApi.js";
+import { obtainUsuarios } from "/apiConnection/consumeApi.js";
 
 const form = document.getElementById("loginForm");
 
