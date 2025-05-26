@@ -60,7 +60,7 @@ formRegistro.addEventListener("submit", async function (e) {
         u_direccion: document.getElementById('r-direccion').value,
         u_usuario: r_usuario,
         u_contraseña: r_contraseña1,
-        u_tipoAcceso: "restringido"
+        u_tipoAcceso: "Restringido"
     };
 
     const resultado = await insertarUsuario(nuevoUsuario);
