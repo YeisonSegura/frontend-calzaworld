@@ -1,7 +1,7 @@
 /* Estilos generales */
 body {
     font-family: Arial, sans-serif;
-    background-image: url('/frontend/img/fondo2.jpg');
+    background-image: url('../img/fondo2.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
