@@ -1,0 +1,331 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('/frontend/img/fondo2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #333;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+}
+header .clasea{
+    width: auto;
+}
+
+
+.btn, .ingresar {
+    background-color: rgb(153, 101, 56);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background-color: #cc5500;
+}
+
+main {
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    margin: 20px auto;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+footer {
+    margin-top: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 10px;
+}
+
+
+.contenido {
+    display: none;
+    padding: 1em;
+}
+
+
+.block {
+    display: block;
+}
+.tabla1{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 5px;
+}
+.tabla1 div{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 5px;
+
+}
+.tabla1 div div{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+
+.tabla1 input{
+    width: 250px;
+}
+.tabla1 select{
+    width: 260px;
+    height: 30px;
+    text-align: center;
+
+}
+.tabla1 button{
+    width: 200px;
+    height: 50px;
+}
+
+label {
+    font-weight: bold;
+}
+.tabla1 label {
+    width: 120px;
+    text-align: right; 
+}
+
+.input {
+    width: 100px;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+button, a{
+    background-color: #ff6600;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: background 0.3s;
+    text-decoration: none;
+}
+
+button:hover, a:hover{
+    background-color: #cc5500;
+    
+}
+
+.contenedor {
+    margin-top: 20px;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    color: black;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid black;
+    text-align: center;
+}
+
+th {
+    background-color: #ff6600;
+    color: white;
+}
+.tab{
+    display: flex;
+    flex-direction:  row;
+    gap: 10px;
+
+}
+.subconten{
+    color: black;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    height: auto;
+
+}
+main .card_pr{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.card_pr{
+    background-color:red;
+    width: 100px;
+
+}
+#contentCard, #contentCardc, #contentCardU{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    width: 280px;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    background-color: #fff;
+}
+
+.card-img img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 15px;
+}
+
+.card-content h3 {
+    margin: 0 0 10px;
+    font-size: 18px;
+    color: #333;
+}
+
+.card-details {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.card-details li {
+    margin-bottom: 6px;
+    font-size: 14px;
+    color: #555;
+}
+
+.card-details span {
+    font-weight: bold;
+    color: #000;
+}
+
+.card-actions {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.edit-btn, .delete-btn {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    color: #fff;
+}
+
+.edit-btn {
+    background-color: #4CAF50;
+}
+
+.delete-btn {
+    background-color: #f44336;
+}
+.boton_actualizar{
+    background-color: #158c15;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: background 0.3s;
+    text-decoration: none;
+}
+/* Ocultar el modal por defecto */
+.modal {
+  display: none; /* Oculto inicialmente */
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.5); /* Fondo oscuro semitransparente */
+}
+
+/* Contenido del modal */
+.modal-content {
+  background-color: #fff;
+  margin: 10% auto;
+  padding: 20px;
+  border-radius: 8px;
+  width: 80%;
+  max-width: 600px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+/* Botón de cierre */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: #000;
+}
+
+/* Organización en columnas */
+.div1, .div2 {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.div1 div, .div2 div {
+  flex: 1;
+}
+
+/* Botones */
+.modal-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.input {
+  width: 100%;
+  padding: 6px;
+  box-sizing: border-box;
+}
+

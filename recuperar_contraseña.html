@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recuperar Contraseña</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="/frontend/css/styleslogin.css">
+</head>
+<body>
+    <div class="wrapper">
+        <form id="recuperarForm">
+            <h1>Recuperar Contraseña</h1>
+            <p style="text-align: center; margin-bottom: 20px;">Ingresa id registrado al que deseas recuperar contraseña.</p>
+            <div class="input-box">
+                <input id="usuario" type="text" placeholder="Escribe tu ID" required>
+                <i class='bx bx-envelope'></i>
+            </div>
+            <div>
+                <button type="submit" class="btn">Enviar</button>
+            </div>
+            <div style="text-align: center; margin-top: 15px;">
+                <a href="/frontend/login.html">¿Ya recordaste tu contraseña? Inicia sesión</a>
+            </div>
+        </form>
+    </div>
+
+    <script src="/frontend/js/recuperar.js" type="module"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+</html>

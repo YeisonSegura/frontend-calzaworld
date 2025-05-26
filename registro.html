@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Registro</title>
+    <link rel="stylesheet" href="/frontend/css/stylesregistro.css">
+</head>
+<body>
+    <header>
+        <div>
+            <img width="100px" height="60px" src="/frontend/img/icon2.png" alt="Icono de la página">
+        </div>
+        <div>
+            <h2>Formulario de Registro</h2>
+        </div>
+    </header>
+    
+    <main>
+        <form id="registroForm">
+            <div>
+                <label for="r-id">Ingrese su identificación Id</label>
+                <input type="number" name="r-id" id="r-id" placeholder="Escribe tu Id" required>
+            </div>
+            <div>
+                <label for="r-nombre">Ingrese su nombre</label>
+                <input type="text" name="r-nombre" id="r-nombre" placeholder="Escribe tu nombre" required>
+            </div>
+            <div>
+                <label for="r-apellido">Ingrese su apellido</label>
+                <input type="text" id="r-apellido" name="r-apellido" placeholder="Escribe tu apellido" required>
+            </div>
+            <div>
+                <label for="r-correo">Correo</label>
+                <input type="email" name="r-correo" id="r-correo" placeholder="Escribe tu correo" required>
+            </div>
+            <div>
+                <label for="r-direccion">Dirección</label>
+                <input type="text" name="r-direccion" id="r-direccion" placeholder="Escribe tu dirección" required> <!-- Cambio el tipo de input a "text" para dirección -->
+            </div>
+            <div>
+                <label for="r-usuario">Digite su usuario</label>
+                <input type="text" name="r-usuario" id="r-usuario" placeholder="Escribe tu usuario" required>
+            </div>
+            <div>
+                <label for="r-contraseña1">Digite su contraseña</label>
+                <input type="password" name="r-contraseña1" id="r-contraseña1">
+            </div>
+            <div>
+                <label for="r-contraseña2">Vuelva a verificar su contraseña</label>
+                <input type="password" name="r-contraseña2" id="r-contraseña2">
+            </div>
+            <button type="submit">Registrar Usuario</button>
+        </form>
+    </main>
+    <script type="module" src="/frontend/js/registro.js"></script>
+</body>
+</html>

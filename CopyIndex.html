@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calzado la 43</title>
+    <link rel="stylesheet" href="/frontend/css/stylesindex.css">
+</head>
+<body>
+    <header class="container"> 
+        <div>
+            <img width="100px"height="60px" src="img/Icon2.png" alt="">
+        </div>
+        <div>
+            <button onclick="enviar();" class="btn">Inicio</button>        
+            <button onclick="enviar();" class="btn">Inventario</button>        
+            <button onclick="enviar();" class="btn" >Proveedores</button>
+            <button onclick="enviar();" class="btn">Clientes</button>
+            <button onclick="enviar();" class="btn">Ventas</button>
+        </div>
+        <div>
+            <a href="/frontend/login.html" class="ingresar">Ingresar</a>
+        </div>
+        
+        
+    </header>
+    
+    <main id="contenido">
+        <h2>Bienvenido al Sistema de Inventario de Calzado la 43.</h2>
+        <div id="card">
+            <div>
+                <img width="250px" height="300px" src="/frontend/img/fondo1.jpg" alt="">                
+            </div>
+                <div>
+                    La empresa calzado la 43, es una empresa colombiana con mas de 10 años de experiencia  en la comercialización
+                    y venta de todo tipo de zapatos, para hombres,damas y niños. Calzado la 43, contamos con calzado de calidad nacional y importando
+                    de la mejor calidad. Ademas, contamos con una gran variedad de tipos de zapatos, para todo tipo de Ocasiones.
+                </div>    
+        </div>
+    </main>
+    
+    <footer>
+        <p>&copy; 2024 Calzado la 43 - Todos los derechos reservados</p>
+    </footer>
+    <script>
+        function enviar(){
+            window.location.href="/frontend/login.html";
+        }
+    </script>
+
+</body>
+</html>

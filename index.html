@@ -1,0 +1,710 @@
+<script type="module">
+  document.addEventListener("DOMContentLoaded", () => {
+    const usuario = localStorage.getItem("Usuario");
+    const tipoAcceso = localStorage.getItem("tipoacceso");
+
+    if (!usuario || !tipoAcceso) {
+      window.location.href = "/frontend/login.html";
+      return;
+    }
+
+    if (tipoAcceso === "Usuario") {
+      const botonVentas = document.querySelector('button[data-number="6"]');
+      if (botonVentas) botonVentas.remove();
+    }
+  });
+</script>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calzado la 43</title>
+    <link rel="stylesheet" href="/frontend/css/stylesindex.css">
+
+</head>
+<body>
+    <header class="container"> 
+        <div>
+            <img  width="150px" height="100px" src="/frontend/img/icon5.png" alt="">
+        </div>  
+        <div class="clasea">
+            <button data-number="1"  class="btn">Inicio</button>        
+            <button data-number="2"  class="btn">Inventario</button>        
+            <button data-number="3"  class="btn" >Proveedores</button>
+            <button data-number="4"  class="btn" >Clientes</button>
+            <button data-number="5"  class="btn">Ventas</button>
+            <button data-number="6"  class="btn">Usuarios</button>
+
+        </div>
+        <div>
+        <a href="#" class="ingresar" onclick="cerrarSesion()">Salir</a>
+        </div>
+    </header>
+    <div id="content" class="contenedormayor">
+        <div class="contenido" data-seccion="1">
+           <main >
+            <div>
+                <img width="250px" height="300px" src="/frontend/img/fondo1.jpg" alt="">                
+            </div>
+                <div>
+                    La empresa calzado la 43, es una empresa colombiana con mas de 10 años de experiencia  en la comercialización
+                    y venta de todo tipo de zapatos, para hombres,damas y niños. Calzado la 43, contamos con calzado de calidad nacional y importando
+                    de la mejor calidad. Ademas, contamos con una gran variedad de tipos de zapatos, para todo tipo de Ocasiones.
+                </div>  
+                             
+            </main>
+            <footer>
+                <p>&copy; 2025 Calzado la 43 - Todos los derechos reservados</p>
+            </footer>
+        
+            </div>
+            
+        </div>
+        <div class="contenido" data-seccion="2">
+            <div class="subconten">
+                <h2 class="tittle block">Inventario</h2>
+                <form class="formulario" id="formularioProductos">
+                    <div class ="tabla1">
+                        
+                            <div class=" ">
+                                <div>
+                                    <label for="i_id_proveedor">Proveedor</label>
+                                    <input class="input" id="i_id_proveedor" name="i_id_proveedor" list="lista_proveedores" required placeholder="Buscar por ID o nombre">
+                                    <datalist id="lista_proveedores">
+                                    </datalist>
+                                </div>
+
+                                <div>
+                                    <label>Color</label>
+                                    <input class="input" id="i_color" name="i_color" type="text" required>
+                                </div>
+                                <div>
+                                    <label>Descripcion</label>
+                                    <input class="input" id="i_descripcion" name="i_descripcion" type="text" required>
+                                </div>
+                                   
+                            </div>
+                            <div class="">
+                                <div>
+                                    <label>Cantidad</label>
+                                    <input class="input" id="i_cantidad"  name="i_cantidad" type="number" required>
+                                </div>
+                                <div>
+                                    <label>Talla</label>
+                                    <input class="input" id="i_talla"  name="i_talla" type="number" required>
+                                </div>
+                                <div>
+                                    <label>Marca</label>
+                                    <input class="input" id="i_marca" name="i_marca" type="text" required>
+                                </div>
+                                <div>
+                                    <label>Precio</label>
+                                    <input class="input" id="i_precio"  name="i_precio" type="number" required>
+                                </div>
+                            
+                            </div>
+                       
+                        <div>
+                            <button type="submit" onclick="">Agregar Zapato</button>
+                        </div>
+
+                    </div>            
+                </form>
+            </div>
+            <main >
+                <h1>Gestión de Inventario</h1>
+                
+                <div class="contenedor">
+                    <table id="tabla_productos" border="1">
+                        <thead>
+                            <tr>
+                                <th>Id</th>
+                                <th>Color</th>
+                                <th>Id Proveedor</th>
+                                <th>Cantidad</th>
+                                <th>Talla</th>
+                                <th>Marca</th>
+                                <th>Descripcion</th>
+                                <th>Precio</th>
+                                <th>Acciones</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+               
+            </main>
+            <footer>
+                <p>&copy; 2025 Calzado la 43 - Todos los derechos reservados</p>
+            </footer>
+        </div>
+        <div class="contenido" data-seccion="3">
+            <div class="subconten">
+                <h2 class="tittle">Proveedores</h2>
+                <form class="formulario" id="formularioProveedores">
+                    <div class ="tabla1">
+                        <div class=" div1">
+                            <div>
+                                <label>Id Proveedor</label>
+                                <input class="input" id="po_id" name="p_id" type="number" required>
+                            </div>
+                            <div>
+                                <label>Nombre </label>
+                                <input class="input" id="po_nombre" name="p_nombre" type="text" required>
+                            </div>
+                            <div>
+                                <label>Apellido</label>
+                                <input class="input" id="po_apellido" name="p_apellido" type="text" required>
+                            </div>
+                               
+                        </div>
+                        <div class="div2">
+                            <div>
+                                <label>Empresa</label>
+                                <input class="input" id="po_empresa"  name="p_empresa" type="text" required>
+                            </div>
+                            <div>
+                                <label>Telefono</label>
+                                <input class="input" id="po_telefono" name="p_telefono" type="text" required>
+                            </div>
+                            <div>
+                                <label>Correo</label>
+                                <input class="input" id="po_correo" name="correo" type="text" required>
+                            </div>
+                            
+                            
+                        
+                        </div>
+                        <div>
+                            <button type="submit" >Agregar Proveedor</button>
+
+                        </div>
+
+                    </div>            
+                </form>
+            </div>
+            <main >
+                <div class="contenedor" id="contentCard">
+                    
+                </div>
+                
+            </main>
+            <footer>
+                <p>&copy; 2025 Calzado la 43 - Todos los derechos reservados</p>
+            </footer>
+         </div>
+         <div class="contenido" data-seccion="4">
+            <div class="subconten">
+                <h2 class="tittle">Clientes</h2>
+                <form class="formulario" id="formularioClientes">
+                    <div class ="tabla1">
+                        <div class=" div1">
+                            <div>
+                                <label>Id Cliente</label>
+                                <input class="input" id="c_id" name="c_id" type="number" required>
+                            </div>
+                            <div>
+                                <label>Nombre </label>
+                                <input class="input" id="c_nombre" name="c_nombre" type="text" required>
+                            </div>
+                            <div>
+                                <label>Apellido</label>
+                                <input class="input" id="c_apellido" name="c_id" type="text" required>
+                            </div>
+                               
+                        </div>
+                        <div class="div2">
+                            <div>
+                                <label>Dirección</label>
+                                <input class="input" id="c_direccion"  name="c_direccion" type="text" required>
+                            </div>
+                            <div>
+                                <label>Telefono</label>
+                                <input class="input" id="c_telefono" name="c_telefono" type="text" required>
+                            </div>
+                            <div>
+                                <label>Correo</label>
+                                <input class="input" id="c_correo" name="c_correo" type="email" required>
+                            </div>
+                        
+                        </div>
+                        <div>
+                            <button type="submit" >Agregar Cliente</button>
+                        </div>
+
+                    </div>            
+                </form>
+            </div>
+            <main >
+                <div class="contenedor" id="contentCardc">
+                    
+                </div>
+            </main>
+            <footer>
+                <p>&copy; 2025 Calzado la 43 - Todos los derechos reservados</p>
+            </footer>
+         </div>
+        <div class="contenido" data-seccion="5">
+            <div class="subconten">
+                <h2 class="tittle">ventas</h2>
+                <form class="formulario" id="formularioVentas">
+                    <div class ="tabla1">
+                        <div class=" div1">
+                            <div>
+                                <label>Id Zapato</label>
+                                <input class="input" id="v_idzapato" name="v_id" type="number" required>
+                            </div>
+                            <div>
+                                <label>Id Cliente </label>
+                                <input class="input" id="v_idcliente" name="v_idcliente" type="number" required>
+                            </div>
+                            <div>
+                                <label>Estado pago</label>
+                                <select  id="v_Estado_Pago" name="v_Estado_Pago" required>
+                                    <option value="pago">Pago</option>
+                                    <option value="pendiente">Pendiente</option>
+                                </select>
+                                </div>
+                            
+                            <div>
+                                <label>Cantidad</label>
+                                <input class="input" id="v_cantidad" name="v_cantidad" type="number" required>
+                            </div>
+                               
+                        </div>
+                        <div class="div2">
+                            <div>
+                                <label>Ciudad de Envio</label>
+                                <input class="input" id="v_ciudad"  name="v_ciudad" type="text" required>
+                            </div>
+                            <div>
+                                <label>Direccion de envio</label>
+                                <input class="input" id="v_direccion" name="v_direccion" type="text" required>
+                            </div>
+                            <div>
+                                <label>Correo</label>
+                                <input class="input" id="v_correo" name="v_correo" type="correo" required>
+                            </div>
+                            <div>
+                                <label>Estado Despacho</label>
+                                <select name="tipo" id="v_Estado_Despacho" name="v_Estado_Despacho" required>
+                                    <option value="pendiente">Pendiente</option>
+                                    <option value="despachado">Despachado</option>
+                                </select>
+                            </div>
+                        
+                        </div>
+                        <div>
+                            <button type="submit">Agregar Venta</button>
+                        </div>
+
+                    </div>            
+                </form>
+            </div>
+            <main >
+                <div class="contenedor">
+                    <table id="tabla_ventas" border="1">
+                        <thead>
+                            <tr>
+                                <th>Id Venta</th>
+                                <th>Id Producto</th>
+                                <th>Id Cliente</th>
+                                <th>Estado Pago</th>
+                                <th>Cantidad</th>
+                                <th>Precio</th>
+                                <th>Ciudad de envio</th>
+                                <th>Dirección envio</th>
+                                <th>Total</th>
+                                <th>Correo</th>
+                                <th>Estado Despacho</th>
+                                <th>Acciones</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>         
+            </main>
+            <footer>
+                <p>&copy; 2025 Calzado la 43 - Todos los derechos reservados</p>
+            </footer>
+        </div>
+        <div class="contenido" data-seccion="6">
+            <div class="subconten">
+                <h2 class="tittle">Usuarios</h2>
+            </div>
+            <main >
+                <div class="contenedor" id="contentCardU">
+                    
+                </div>
+            </main>
+            <footer>
+                <p>&copy; 2025 Calzado la 43 - Todos los derechos reservados</p>
+            </footer>
+        </div>
+       <!--emertgentes-->
+       <!-- MODAL EDITAR PROVEEDOR -->
+        <div id="modalProveedor" class="modal">
+            <div class="modal-content" id="modal_actualizar_proveedor">
+                <span class="close" onclick="cerrarModal()">&times;</span>
+                <h2>Editar Proveedor</h2>
+                <form id="formEditarProveedor">
+                <div class="div1">
+                    <div>
+                    <label>Id Proveedor</label>
+                    <input class="input" id="ac_po_id" name="p_id" type="number" readonly>
+                    </div>
+                    <div>
+                    <label>Nombre</label>
+                    <input class="input" id="ac_po_nombre" name="p_nombre" type="text" required>
+                    </div>
+                    <div>
+                    <label>Apellido</label>
+                    <input class="input" id="ac_po_apellido" name="p_apellido" type="text" required>
+                    </div>
+                </div>
+                <div class="div2">
+                    <div>
+                    <label>Empresa</label>
+                    <input class="input" id="ac_po_empresa" name="p_empresa" type="text" required>
+                    </div>
+                    <div>
+                    <label>Teléfono</label>
+                    <input class="input" id="ac_po_telefono" name="p_telefono" type="text" required>
+                    </div>
+                    <div>
+                    <label>Correo</label>
+                    <input class="input" id="ac_po_correo" name="correo" type="email" required>
+                    </div>
+                </div>
+                <div class="modal-buttons">
+                    <button type="submit">Actualizar</button>
+                    <button type="button" onclick="cerrarModal()">Cerrar</button>
+                </div>
+                </form>
+            </div>
+        </div>
+        <!--Modal para eliminar-->
+        <div id="modalEliminarProveedor" class="modal">
+            <div class="modal-content">
+                <h3>¿Estás seguro de que deseas eliminar este proveedor?</h3>
+                <button id="modalEliminarProveedor"  onclick="eliminarProvee()" class="btn-confirmar">Sí</button>
+                <button id="modalEliminarProveedor"  onclick="cerrarModalEliProv()" class="btn-cancelar">No</button>
+            </div>
+        </div>
+        
+        <!-- MODAL EDITAR ClIENTE -->
+        <div id="modalCliente" class="modal">
+            <div class="modal-content" id="modal_actualizar_cliente">
+                <span class="close" onclick="cerrarModalcli()">&times;</span>
+                <h2>Editar Cliente</h2>
+                <form id="formEditarCliente">
+                <div class="div1">
+                    <div>
+                    <label>Id cliente</label>
+                    <input class="input" id="Mcl_id" name="c_id" type="number" readonly>
+                    </div>
+                    <div>
+                    <label>Nombre</label>
+                    <input class="input" id="Mcl_nombre" name="c_nombre" type="text" required>
+                    </div>
+                    <div>
+                    <label>Apellido</label>
+                    <input class="input" id="Mcl_apellido" name="c_apellido" type="text" required>
+                    </div>
+                </div>
+                <div class="div2">
+                    <div>
+                    <label>Direccion</label>
+                    <input class="input" id="Mcl_direccion" name="c_direccion" type="text" required>
+                    </div>
+                    <div>
+                    <label>Teléfono</label>
+                    <input class="input" id="Mcl_telefono" name="c_telefono" type="text" required>
+                    </div>
+                    <div>
+                    <label>Correo</label>
+                    <input class="input" id="Mcl_correo" name="c_correo" type="email" required>
+                    </div>
+                </div>
+                <div class="modal-buttons">
+                    <button type="submit">Actualizar</button>
+                    <button type="button" onclick="cerrarModalcli()">Cerrar</button>
+                </div>
+                </form>
+            </div>
+        </div>
+
+        <!--Modal para eliminar-->
+        <div id="modalEliminarCliente" class="modal">
+            <div class="modal-content">
+                <h3>¿Estás seguro de que deseas eliminar este cliente?</h3>
+                <button id="confirmarEliminarcli"  onclick="eliminarClien()" class="btn-confirmar">Sí</button>
+                <button id="cancelarEliminarcli"  onclick="cerrarModalEliClie()" class="btn-cancelar">No</button>
+            </div>
+        </div>
+
+        <!--Modal para productos-->
+
+        <div id="modalProducto" class="modal">
+            <div class="modal-content" id="modal_actualizar_producto">
+                <span class="close" onclick="cerrarModalProd()">&times;</span>
+                <h2>Editar Producto</h2>
+                <form id="formEditarProducto">
+                <div class="div1">                
+                    <div>
+                    <label>Id Producto</label>
+                    <input class="input" id="Mpr_id" name="mp_id" type="number" readonly>
+                    </div>
+                    <div>
+                    <label>Color</label>
+                    <input class="input" id="Mpr_color" name="mp_color" type="text" required>
+                    </div>
+                    <div>
+                    <label>Proveedor</label>
+                    <input class="input" id="Mpr_proveedor" name="mp_proveedor" type="number" required>
+                    </div>
+                    <div>
+                    <label>Cantidad</label>
+                    <input class="input" id="Mpr_cantidad" name="mp_cantidad" type="text" required>
+                    </div>
+                </div>
+                <div class="div2">
+                    <div>
+                    <label>Talla</label>
+                    <input class="input" id="Mpr_talla" name="mp_talla" type="text" required>
+                    </div>
+                    <div>
+                    <label>Marca</label>
+                    <input class="input" id="Mpr_marca" name="mp_marca" type="text" required>
+                    </div>
+                    <div>
+                    <label>Descripcion</label>
+                    <input class="input" id="Mpr_descripcion" name="mp_descripcion" type="text" required>
+                    </div>
+                    <div>
+                    <label>Precio</label>
+                    <input class="input" id="Mpr_precio" name="mp_precio" type="number" required>
+                    </div>
+                </div>
+                <div class="modal-buttons">
+                    <button type="submit">Actualizar</button>
+                    <button type="button" onclick="cerrarModalProd()">Cerrar</button>
+                </div>
+                </form>
+            </div>
+        </div>
+        <div id="modalEliminarProducto" class="modal">
+            <div class="modal-content">
+                <h3>¿Estás seguro de que deseas eliminar este Producto?</h3>
+                <button id="confirmarEliminarcli"  onclick="eliminarProducto()" class="btn-confirmar">Sí</button>
+                <button id="cancelarEliminarcli"  onclick="cerrarModalEliProd()" class="btn-cancelar">No</button>
+            </div>
+        </div>
+        <!--Modal para Ventas-->
+
+        <div id="modalventa" class="modal">
+                <div class="modal-content" id="modal_actualizar_venta" style="width: 90%; max-width: 1000px;">
+                <span class="close" onclick="cerrarModalVenta()">&times;</span>
+                <h2>Editar Producto</h2>
+                <form id="formEditarVenta">
+                    <div class="div1"> 
+                        <div> 
+                            <label>Id venta</label>
+                            <input class="input" id="Mid_venta" name="Mid_venta" type="number" readonly>
+                        </div>              
+                        <div>
+                            <label>Id zapato</label>
+                            <input class="input" id="Mid_zapato" name="Mid_zapato" type="number" readonly>
+                        </div>
+                        <div>
+                            <label>Id Cliente</label>
+                            <input class="input" id="Mpid_cliente" name="Mpid_cliente" type="text" required>
+                        </div>
+                        <div>
+                            <label>Estado pago</label>
+                            <select class="input" id="MEstadoP" name="MEstadoP" required>
+                                <option value="pago">Pago</option>
+                                <option value="pendiente">Pendiente</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label>Cantidad</label>
+                            <input class="input" id="MpCantidad" name="MpCantidad" type="number" required>
+                        </div>
+                    </div> <!-- CIERRA div1 -->
+
+                    <div class="div2">
+                        <div>
+                            <label>Precio</label>
+                            <input class="input" id="MventaP" name="MventaP" type="number" readonly>
+                        </div>
+                        <div>
+                            <label>Ciudad de envio</label>
+                            <input class="input" id="Mventa_ciudad" name="Mventa_ciudad" type="text" required>
+                        </div>
+                        <div>
+                            <label>Direccion de envio</label>
+                            <input class="input" id="Mventa_direc" name="Mventa_direc" type="text" required>
+                        </div>
+                        <div>
+                            <label>Correo</label>
+                            <input class="input" id="Mventa_correo" name="Mventa_correo" type="text" required>
+                        </div>
+                        <div>
+                            <label>Estado Despacho</label>
+                            <select class="input" name="MestadoD" id="MestadoD" required>
+                                <option value="pendiente">Pendiente</option>
+                                <option value="despachado">Despachado</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label>Total</label>
+                            <input class="input" id="Mtotal" name="Mtotal" type="number" readonly>
+                        </div>
+                    </div> <!-- CIERRA div2 -->
+
+                    <div class="modal-buttons">
+                        <button type="submit">Actualizar</button>
+                        <button type="button" onclick="cerrarModalVenta()">Cerrar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div id="modalEliminarVenta" class="modal">
+            <div class="modal-content">
+                <h3>¿Estás seguro de que deseas eliminar este Venta?</h3>
+                <button id="confirmarEliminarcli"  onclick="eliminarVenta()" class="btn-confirmar">Sí</button>
+                <button id="cancelarEliminarcli"  onclick="cerrarModalEliVenta()" class="btn-cancelar">No</button>
+            </div>
+        </div>
+
+        <!--Modal para usuarios-->
+
+        <div id="modalUsario" class="modal">
+            <div class="modal-content" id="modal_actualizar_usuario">
+                <span class="close" onclick="cerrarModalUsu()">&times;</span>
+                <h2>Editar Producto</h2>
+                <form id="formEditarUsuario">
+                <div class="div1">                
+                    <div>
+                    <label>Id Usuario</label>
+                    <input class="input" id="Mid_usu" name="Mid_usu" type="number" readonly>
+                    </div>
+                    <div>
+                    <label>Nombre</label>
+                    <input class="input" id="MNombre_usu" name="mp_cMNombre_usuolor" type="text" required>
+                    </div>
+                    <div>
+                    <label>Apellido</label>
+                    <input class="input" id="MApellido_usu" name="MApellido_usu" type="text" required>
+                    </div>
+                    <div>
+                    <label>Direccion</label>
+                    <input class="input" id="MDireecion_usu" name="MDireecion_usu" type="text" required>
+                    </div>
+                </div>
+                <div class="div2">
+                    <div>
+                    <label>Correo</label>
+                    <input class="input" id="Mcorreo_usu" name="Mcorreo_usu" type="text" required>
+                    </div>
+                    <div>
+                    <label>Usuario</label>
+                    <input class="input" id="MUsua_usu" name="MUsua_usu" type="text" required>
+                    </div>
+                    <div>
+                    <label>Contraseña</label>
+                    <input class="input" id="Mcontra_usu" name="Mcontra_usu" type="text" required>
+                    </div>
+                    <div>
+                    <label>Tipo Acceso</label>
+                            <select class="input" name="Mtipo_acc" id="Mtipo_acc" required>
+                                <option value="Restringido">Restringido</option>
+                                <option value="Usuario">Usuario</option>
+                                <option value="Admin">Admin</option>
+                            </select>
+                    </div>
+                </div>
+                <div class="modal-buttons">
+                    <button type="submit">Actualizar</button>
+                    <button type="button" onclick="cerrarModalUsu()">Cerrar</button>
+                </div>
+                </form>
+            </div>
+        </div>
+        <div id="modalEliminarUsuario" class="modal">
+            <div class="modal-content">
+                <h3>¿Estás seguro de que deseas eliminar este Usuario?</h3>
+                <button id="confirmarEliminarusu"  onclick="eliminarUsu()" class="btn-confirmar">Sí</button>
+                <button id="cancelarEliminarusu"  onclick="cerrarModalEliUsu()" class="btn-cancelar">No</button>
+            </div>
+        </div>
+
+    </div>
+    <script src="/frontend/js/navegacion.js" type="module"></script>
+    <script src="/frontend/js/proveedores.js " type="module" ></script>
+    <script src="/frontend/js/inventario.js" type="module" ></script>
+    <script src="/frontend/js/clientes.js" type="module" ></script>
+    <script src="/frontend/js/productos.js" type="module"></script>
+    <script src="/frontend/js/ventas.js" type="module"></script>
+    <script src="/frontend/js/usuarios.js" type="module"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> 
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> 
+
+   
+    <script type="module">
+    import { eliminarProvee, abrirModalEliProv, cerrarModalEliProv,cerrarModal  } from '../frontend/js/proveedores.js';
+    import {  eliminarClien , abrirModalEliClie,cerrarModalEliClie,cerrarModalcli} from '../frontend/js/clientes.js';
+    import {  eliminarProducto,cerrarModalProd,abrirModalEliProd,cerrarModalEliProd} from '../frontend/js/productos.js';
+    import {  eliminarVenta,cerrarModalVenta,abrirModalEliVenta,cerrarModalEliVenta} from '../frontend/js/ventas.js';
+    import {  eliminarUsu,cerrarModalUsu,abrirModalEliUsu,cerrarModalEliUsu} from '../frontend/js/usuarios.js';
+
+
+    // Exponer al global para que se pueda usar desde `onclick` en HTML
+    window.eliminarProvee = eliminarProvee;
+    window.abrirModalEliProv = abrirModalEliProv;
+    window.cerrarModalEliProv = cerrarModalEliProv;
+    window.cerrarModal = cerrarModal;
+    //cliente
+    window.eliminarClien = eliminarClien;
+    window.abrirModalEliClie = abrirModalEliClie;
+    window.cerrarModalEliClie = cerrarModalEliClie;
+    window.cerrarModalcli = cerrarModalcli;
+    //productos
+    window.eliminarProducto = eliminarProducto;
+    window.abrirModalEliProd = abrirModalEliProd;
+    window.cerrarModalEliProd = cerrarModalEliProd;
+    window.cerrarModalProd = cerrarModalProd;
+    //ventas
+    window.eliminarVenta = eliminarVenta;
+    window.abrirModalEliVenta = abrirModalEliVenta;
+    window.cerrarModalEliVenta = cerrarModalEliVenta;
+    window.cerrarModalVenta = cerrarModalVenta;
+    //ventas
+    window.eliminarUsu = eliminarUsu;
+    window.abrirModalEliUsu = abrirModalEliUsu;
+    window.cerrarModalEliUsu = cerrarModalEliUsu;
+    window.cerrarModalUsu= cerrarModalUsu;
+
+    </script>
+   
+<script>
+  function cerrarSesion() {
+  localStorage.clear();
+  sessionStorage.clear();
+  window.location.href = "/frontend/login.html";
+}
+
+</script>
+    
+</body>
+</html>
