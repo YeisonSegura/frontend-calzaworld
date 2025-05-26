@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
         confirmButtonText: 'Reintentar',
         confirmButtonColor: '#3085d6'
       });
-    } else if (!accesoRestringido) {
+    } else if (accesoRestringido) {
       Swal.fire({
         icon: 'warning',
         title: 'Acceso restringido',
