@@ -374,15 +374,7 @@ export async function eliminarVenta(){
         }
     }
      let actualizarproducto = await actualizarProductoAntiguo(producto_id,cantidadventa,operacion);
-    if(!actualizarproducto){
-        Swal.fire({
-                icon: 'success',
-                title: 'Surgio un error',
-                text: 'Se produjo un error al restaurar la cantidad del producto.',
-                confirmButtonText: 'Aceptar',
-                confirmButtonColor: '#3085d6'
-            })
-    }
+    
         const resultado = await eliminarVentas(idVenta);
         if (resultado) {
                 Swal.fire({
